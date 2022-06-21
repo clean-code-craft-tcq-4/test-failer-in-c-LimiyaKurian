@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <assert.h>
 #include "alerter.h"
+#include "alerter_Test.h"
 
 void alertInCelcius(float farenheit) {
     float celcius = (farenheit - 32) * 5 / 9;
