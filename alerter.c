@@ -2,8 +2,6 @@
 #include <assert.h>
 #include "alerter.h"
 
-extern int networkAlertStub(float celcius);
-
 int alertFailureCount = 0;
 
 void alertInCelcius(float farenheit) {
