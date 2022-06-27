@@ -1,3 +1,3 @@
 #include <stdio.h>
 
-extern int networkAlertStub(float celcius);
+int networkAlertStub(float celcius);
