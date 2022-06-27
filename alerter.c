@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "alerter_stub.h"
+#include "alerter.h"
 
 extern int networkAlertStub(float celcius);
 
