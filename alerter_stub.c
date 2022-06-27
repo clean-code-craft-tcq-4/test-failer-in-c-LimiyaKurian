@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "alerter_stub.h"
 
-int networkAlertStub(float celcius);
-
 int networkAlertStub(float celcius) {
     printf("ALERT: Temperature is %.1f celcius.\n", celcius);
     // Return 200 for ok
