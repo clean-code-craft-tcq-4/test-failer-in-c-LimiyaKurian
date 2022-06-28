@@ -2,15 +2,15 @@
 #include <assert.h>
 #include "misaligned.h"
 
-int GetPairNumberFromColor(const ColorPair_t* colorPair_t) {
+int GetPairNumberFromColor(const ColorPair* colorPair) {
     return colorPair->majorColor * numberOfMinorColors +
             colorPair->minorColor + 1;
 }
 
 int printColorMap() {
 
-    int majorColorCount =0 ,minorColorCount = 0;
-	ColorPair colorpair;
+    int majorColorCount = 0 ,minorColorCount = 0;
+    ColorPair colorpair;
     for(majorColorCount = 0; majorColorCount < numberOfMajorColors; majorColorCount++) {
         for(minorColorCount = 0; minorColorCount < numberOfMinorColors; minorColorCount++) {
 		colorpair.majorColor = (MajorColor)majorColorCount;
@@ -25,7 +25,7 @@ int printColorMap() {
 
 void testPairToNumber(MajorColor major, MinorColor minor, int expectedPairNumber)
 {
-    ColorPair colorPair;
+    ColorPair colorPair; 
     colorPair.majorColor = major;
     colorPair.minorColor = minor;
     int pairNumber = GetPairNumberFromColor(&colorPair);
