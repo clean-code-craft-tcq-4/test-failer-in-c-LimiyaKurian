@@ -1,17 +1,23 @@
 #include <stdio.h>
 #include <assert.h>
+#include "misaligned.h"
+
+int ColorpairNumber(int majorIndex , int minorIndex)
+{
+	return ((majorIndex * numberOfMajorColors) + minorIndex+1);
+}
 
 int printColorMap() {
-    const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
-    const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
-    int i = 0, j = 0;
-    for(i = 0; i < 5; i++) {
-        for(j = 0; j < 5; j++) {
-            printf("%d \t %s  \t %s\n", ((i * 5) + j+1), majorColor[i], minorColor[j]);
+
+    int majorColorCount =0 ,minorColorCount = 0;
+    for(majorColorCount = 0; majorColorCount < numberOfMajorColors; majorColorCount++) {
+        for(minorColorCount = 0; minorColorCount < numberOfMinorColors; minorColorCount++) {
+		int pairnumber = ColorpairNumber(majorColorCount,minorColorCount);
+        printf("%d \t %s  \t %s\n", pairnumber, majorColor[majorColorCount], minorColor[minorColorCount]);
         }
     }
     
-    return i * j;
+    return majorColorCount * minorColorCount;
 }
 
 int main() {
