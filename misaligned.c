@@ -13,7 +13,7 @@ int printColorMap() {
     for(majorColorCount = 0; majorColorCount < numberOfMajorColors; majorColorCount++) {
         for(minorColorCount = 0; minorColorCount < numberOfMinorColors; minorColorCount++) {
         int pairnumber = ColorpairNumber(majorColorCount,minorColorCount);
-        printf("%d\t\t%s\t\t%s\n", pairnumber, majorColor[majorColorCount], minorColor[minorColorCount]);
+        printf("%d\t|\t%s\t|\t%s\n", pairnumber, majorColor[majorColorCount], minorColor[minorColorCount]);
         }
     }
     
