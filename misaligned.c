@@ -10,7 +10,7 @@ int GetPairNumberFromColor(const ColorPair* colorPair) {
 int printColorMap() {
 
     int majorColorCount = 0 ,minorColorCount = 0;
-    ColorPair colorpair;
+    ColorPair colorPair;
     for(majorColorCount = 0; majorColorCount < numberOfMajorColors; majorColorCount++) {
         for(minorColorCount = 0; minorColorCount < numberOfMinorColors; minorColorCount++) {
 		colorpair.majorColor = (MajorColor)majorColorCount;
