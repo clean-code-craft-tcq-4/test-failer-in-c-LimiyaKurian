@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <assert.h>
-#include "alerter_stub.h"
 
 int alertFailureCount = 0;
 
@@ -15,7 +14,7 @@ int networkAlertStub(float celcius) {
     }
     else
     {
-    return 200;
+        return 200;
     }
 }
 
